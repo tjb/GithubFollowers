@@ -32,7 +32,8 @@ class SearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        // On swipe back, the navigation bar will not disappear if transaction is not completed
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 

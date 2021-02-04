@@ -14,8 +14,13 @@ class FollowerListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // On swipe back, the navigation bar will not disappear if transaction is not completed
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
