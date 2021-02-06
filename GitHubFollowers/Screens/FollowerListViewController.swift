@@ -26,10 +26,31 @@ class FollowerListViewController: UIViewController {
     }
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
         view.addSubview(collectionView)
         collectionView.backgroundColor = .systemPink
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
+    }
+    
+    // Does my VC need to know about all this?
+    // Hints: No access to global class functions so no
+    // Thus we can refactor this out to a helper class!
+    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
+        let width = view.bounds.width
+        let paddingForInsets: CGFloat = 12
+        let minimumItemSpacing: CGFloat = 10
+        let availableWidth = width - (paddingForInsets * 2) - (minimumItemSpacing * 2)
+        let itemWidth = availableWidth / 3
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: paddingForInsets,
+                                               left: paddingForInsets,
+                                               bottom: paddingForInsets,
+                                               right: paddingForInsets)
+        // we +40 on the hight to give us some extra room for the label
+        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
+        
+        return flowLayout
     }
     
     func configureViewController() {
