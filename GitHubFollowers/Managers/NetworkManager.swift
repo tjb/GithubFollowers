@@ -5,11 +5,12 @@
 //  Created by Tyler Bobella on 2/3/21.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
-    let baseURL = "https://api.github.com/users/"
+    private let baseURL = "https://api.github.com/users/"
+    let cache = NSCache<NSString, UIImage>()
     let DEFAULT_PAGE_SIZE = 100
     
     private init() { }
