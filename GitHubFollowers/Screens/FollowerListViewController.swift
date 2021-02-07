@@ -9,14 +9,22 @@ import UIKit
 
 class FollowerListViewController: UIViewController {
     
+    enum Section {
+        case main
+    }
+    
     var username: String!
+    var followers: [Follower] = []
+    
     var collectionView: UICollectionView!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
         configureCollectionView()
         getFollowers()
+        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,31 +34,10 @@ class FollowerListViewController: UIViewController {
     }
     
     func configureCollectionView() {
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UIHelper.createThreeColumnFlowLayout(in: view))
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .systemPink
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(FollowerCell.self, forCellWithReuseIdentifier: FollowerCell.reuseID)
-    }
-    
-    // Does my VC need to know about all this?
-    // Hints: No access to global class functions so no
-    // Thus we can refactor this out to a helper class!
-    func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
-        let width = view.bounds.width
-        let paddingForInsets: CGFloat = 12
-        let minimumItemSpacing: CGFloat = 10
-        let availableWidth = width - (paddingForInsets * 2) - (minimumItemSpacing * 2)
-        let itemWidth = availableWidth / 3
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.sectionInset = UIEdgeInsets(top: paddingForInsets,
-                                               left: paddingForInsets,
-                                               bottom: paddingForInsets,
-                                               right: paddingForInsets)
-        // we +40 on the hight to give us some extra room for the label
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth + 40)
-        
-        return flowLayout
     }
     
     func configureViewController() {
@@ -59,16 +46,36 @@ class FollowerListViewController: UIViewController {
     }
     
     func getFollowers() {
-        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+        NetworkManager.shared.getFollowers(for: username, page: 1) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let followers):
-                print("Followers.count = \(followers.count)")
+                self.followers = followers
+                self.updateData()
 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Oh no, an error occured!",
                                                 message: error.rawValue,
                                                 buttonTitle: "Ok")
             }
+        }
+    }
+    
+    func configureDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Follower>(collectionView: collectionView, cellProvider: { (collectionView, index, follower) -> UICollectionViewCell? in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FollowerCell.reuseID, for: index) as! FollowerCell
+            cell.set(follower: follower)
+            return cell
+        })
+    }
+    
+    func updateData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(followers)
+        // can we call this from the background thread? is that safe?
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot, animatingDifferences: true)
         }
     }
 }
