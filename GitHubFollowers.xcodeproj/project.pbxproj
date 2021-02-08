@@ -31,6 +31,7 @@
 		3FFB5D0925CEFBB000E629B3 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D0825CEFBB000E629B3 /* GFAvatarImageView.swift */; };
 		3FFB5D0F25CF695C00E629B3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D0E25CF695C00E629B3 /* UIHelper.swift */; };
 		3FFB5D1625D0ADF200E629B3 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D1525D0ADF200E629B3 /* GFEmptyStateView.swift */; };
+		3FFB5D1B25D104E900E629B3 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D1A25D104E900E629B3 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		3FFB5D0825CEFBB000E629B3 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		3FFB5D0E25CF695C00E629B3 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		3FFB5D1525D0ADF200E629B3 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
+		3FFB5D1A25D104E900E629B3 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				3F02440D25A6C81E00271A7F /* SearchViewController.swift */,
 				3F02441525A6C87D00271A7F /* FavoritesListViewController.swift */,
 				3FFB5CB825C34DE600E629B3 /* FollowerListViewController.swift */,
+				3FFB5D1A25D104E900E629B3 /* UserInfoViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFB5CB125B8C74600E629B3 /* GFTextField.swift in Sources */,
+				3FFB5D1B25D104E900E629B3 /* UserInfoViewController.swift in Sources */,
 				3FFB5CF825CBCB1F00E629B3 /* GFNetworkError.swift in Sources */,
 				3F99B52D25A415E00045B206 /* AppDelegate.swift in Sources */,
 				3FFB5CD725C3659B00E629B3 /* UIViewController+Ext.swift in Sources */,
