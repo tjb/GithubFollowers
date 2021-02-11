@@ -39,6 +39,7 @@
 		3FFB5D3525D3952500E629B3 /* GFItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3425D3952500E629B3 /* GFItemInfoViewController.swift */; };
 		3FFB5D3A25D3987100E629B3 /* GFRepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3925D3987100E629B3 /* GFRepoItemViewController.swift */; };
 		3FFB5D3F25D39A0700E629B3 /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */; };
+		3FFB5D4B25D55DE500E629B3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		3FFB5D3425D3952500E629B3 /* GFItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFItemInfoViewController.swift; sourceTree = "<group>"; };
 		3FFB5D3925D3987100E629B3 /* GFRepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemViewController.swift; sourceTree = "<group>"; };
 		3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
+		3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				3FFB5CBE25C3525500E629B3 /* String+Ext.swift */,
 				3FFB5CD625C3659B00E629B3 /* UIViewController+Ext.swift */,
+				3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */,
 			);
 			path = Ext;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				3FFB5D0F25CF695C00E629B3 /* UIHelper.swift in Sources */,
 				3FFB5CF125CBBF2800E629B3 /* NetworkManager.swift in Sources */,
 				3FFB5D3525D3952500E629B3 /* GFItemInfoViewController.swift in Sources */,
+				3FFB5D4B25D55DE500E629B3 /* Date+Ext.swift in Sources */,
 				3F99B52F25A415E00045B206 /* SceneDelegate.swift in Sources */,
 				3FFB5CCD25C35F8A00E629B3 /* GFBodyLabel.swift in Sources */,
 				3FFB5D2F25D214D000E629B3 /* GFItemInfoView.swift in Sources */,
