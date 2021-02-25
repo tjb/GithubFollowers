@@ -41,6 +41,7 @@
 		3FFB5D3F25D39A0700E629B3 /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */; };
 		3FFB5D4B25D55DE500E629B3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */; };
 		3FFB5D5025E2F7D300E629B3 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D4F25E2F7D300E629B3 /* PersistenceManager.swift */; };
+		3FFB5D5525E76DA500E629B3 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D5425E76DA500E629B3 /* FavoriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
 		3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		3FFB5D4F25E2F7D300E629B3 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		3FFB5D5425E76DA500E629B3 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFB5D0025CEFB4000E629B3 /* FollowerCell.swift */,
+				3FFB5D5425E76DA500E629B3 /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				3FFB5D0925CEFBB000E629B3 /* GFAvatarImageView.swift in Sources */,
 				3FFB5D3A25D3987100E629B3 /* GFRepoItemViewController.swift in Sources */,
 				3FFB5CE725CBBABC00E629B3 /* User.swift in Sources */,
+				3FFB5D5525E76DA500E629B3 /* FavoriteCell.swift in Sources */,
 				3FFB5CD225C3604000E629B3 /* GFAlertViewController.swift in Sources */,
 				3FFB5CE225CBBA0B00E629B3 /* Follower.swift in Sources */,
 				3F02441625A6C87D00271A7F /* FavoritesListViewController.swift in Sources */,
