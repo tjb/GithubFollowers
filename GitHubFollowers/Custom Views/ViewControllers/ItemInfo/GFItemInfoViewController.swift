@@ -15,6 +15,8 @@ class GFItemInfoViewController: UIViewController {
     let actionButton = GFButton()
     
     var user: User!
+    // weak to avoid the retain cycle
+    weak var delegate: UserInfoDelegate!
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -29,6 +31,7 @@ class GFItemInfoViewController: UIViewController {
         super.viewDidLoad()
         configureBackgroundView()
         configureStackView()
+        configureActionButton()
         layoutUI()
     }
     
@@ -44,6 +47,15 @@ class GFItemInfoViewController: UIViewController {
         stackView.addArrangedSubview(itemInfoViewOne)
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
+    
+    @objc func actionButtonTapped() {
+        // override in children classes
+    }
+    
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
     
     private func layoutUI() {
         view.addSubview(stackView)

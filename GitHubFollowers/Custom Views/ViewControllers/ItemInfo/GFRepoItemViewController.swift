@@ -15,6 +15,11 @@ class GFRepoItemViewController: GFItemInfoViewController {
         configureItems()
     }
     
+    override func actionButtonTapped() {
+        // this will fire off the method definition in UserInfoViewController
+        delegate.didTapGitHubProfile(for: user)
+    }
+    
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)

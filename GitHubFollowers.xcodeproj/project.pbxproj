@@ -40,6 +40,7 @@
 		3FFB5D3A25D3987100E629B3 /* GFRepoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3925D3987100E629B3 /* GFRepoItemViewController.swift */; };
 		3FFB5D3F25D39A0700E629B3 /* GFFollowerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */; };
 		3FFB5D4B25D55DE500E629B3 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */; };
+		3FFB5D5025E2F7D300E629B3 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5D4F25E2F7D300E629B3 /* PersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		3FFB5D3925D3987100E629B3 /* GFRepoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemViewController.swift; sourceTree = "<group>"; };
 		3FFB5D3E25D39A0700E629B3 /* GFFollowerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemViewController.swift; sourceTree = "<group>"; };
 		3FFB5D4A25D55DE500E629B3 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		3FFB5D4F25E2F7D300E629B3 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3FFB5CF025CBBF2800E629B3 /* NetworkManager.swift */,
+				3FFB5D4F25E2F7D300E629B3 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				3FFB5CBF25C3525500E629B3 /* String+Ext.swift in Sources */,
 				3FFB5D3F25D39A0700E629B3 /* GFFollowerItemViewController.swift in Sources */,
 				3FFB5D0F25CF695C00E629B3 /* UIHelper.swift in Sources */,
+				3FFB5D5025E2F7D300E629B3 /* PersistenceManager.swift in Sources */,
 				3FFB5CF125CBBF2800E629B3 /* NetworkManager.swift in Sources */,
 				3FFB5D3525D3952500E629B3 /* GFItemInfoViewController.swift in Sources */,
 				3FFB5D4B25D55DE500E629B3 /* Date+Ext.swift in Sources */,
